@@ -3,7 +3,7 @@ package com.example.advancedrecyclerviewtest
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.advancedrecyclerviewtest.model.DataSource
 import com.example.advancedrecyclerviewtest.recyclerview.CardAdapter
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         dragMgr.setInitiateOnMove(false)
         dragMgr.setInitiateOnLongPress(true)
 
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = GridLayoutManager(this,2)
         cardAdapter = CardAdapter()
         cardAdapter.setStableId()
         recyclerView.adapter = dragMgr.createWrappedAdapter(cardAdapter)

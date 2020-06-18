@@ -7,11 +7,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginHorizontal="16dp"
     android:layout_marginVertical="8dp"
-    android:elevation="6dp">
+    android:elevation="6dp"
+    android:background="@color/colorAccent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="16dp"
+        android:background="?android:attr/selectableItemBackground">
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:id="@+id/card_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:materialIcon="image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/card_title"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/card_title"
@@ -20,7 +34,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@+id/card_image"
+            app:layout_constraintBottom_toTopOf="@+id/card_content"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/card_content"
@@ -33,9 +48,7 @@
         <View
             android:id="@+id/drag_handle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_height="match_parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
