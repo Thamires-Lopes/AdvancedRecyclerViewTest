@@ -2,14 +2,35 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TESTE BOTTOM SHEET"
+    <net.steamcrafted.materialiconlib.MaterialIconView
+        android:id="@+id/card_share"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:materialIcon="share"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card_copy" />
+
+    <net.steamcrafted.materialiconlib.MaterialIconView
+        android:id="@+id/card_copy"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:materialIcon="content_copy"
+        app:layout_constraintStart_toEndOf="@+id/card_share"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card_cut"/>
+
+    <net.steamcrafted.materialiconlib.MaterialIconView
+        android:id="@+id/card_cut"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:materialIcon="content_cut"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/card_copy"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
