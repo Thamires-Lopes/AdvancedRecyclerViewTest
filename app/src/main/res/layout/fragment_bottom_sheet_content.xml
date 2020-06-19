@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
+    android:background="@color/colorAccent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <net.steamcrafted.materialiconlib.MaterialIconView
