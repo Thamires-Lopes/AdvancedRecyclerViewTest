@@ -5,9 +5,11 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.advancedrecyclerviewtest.bottomsheet.BottomSheetFragment
 import com.example.advancedrecyclerviewtest.model.DataSource
 import com.example.advancedrecyclerviewtest.recyclerview.CardAdapter
 import com.h6ah4i.android.widget.advrecyclerview.draggable.RecyclerViewDragDropManager
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +22,13 @@ class MainActivity : AppCompatActivity() {
 
         initRecyclerView()
         addDataSet()
+
+        call_bottom_sheet.setOnClickListener { callBottomSheet() }
+    }
+
+    private fun callBottomSheet() {
+        val bottomSheet = BottomSheetFragment()
+        bottomSheet.showNow(supportFragmentManager, "BottomSheet")
     }
 
     private fun addDataSet() {
